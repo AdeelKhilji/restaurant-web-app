@@ -1,1 +1,2 @@
-"# Navbar_Component" 
+-npm install
+-npm run dev
