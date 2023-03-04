@@ -45,10 +45,10 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden md:flex">
-                    <NavLink to="/about">
+                    <NavLink to="/menuPage">
                         ABOUT
                     </NavLink>
-                    <NavLink to="/contact">
+                    <NavLink to="/contactPage">
                         CONTACT
                     </NavLink>
                 </div>
