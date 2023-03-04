@@ -1,7 +1,19 @@
-export default function MenuComponent() {
+import Items from "./data/data.json"
+
+export const getStaticProps = async () =>{
+  return{
+    props:{
+      menuItems: Items
+    }
+  }
+}
+
+export default function MenuComponent({menuItems}) {
   return (
     <div class="grid place-items-center h-screen">
-      <h3>Menu Page</h3>
+      {/* {{menuItems.map(menuItem =>(
+        <p key={menuItem.id}>{menuItem}</p>
+      ))}} */}
     </div>
   )
 }
