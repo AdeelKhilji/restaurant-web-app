@@ -1,0 +1,37 @@
+
+{
+  "data":{
+          "menu":[
+                    {
+                      "id" : 1,
+                      "dishName" : "chaat",
+                      "description": "description of chaat"
+                    },
+                    {
+                      "id" : 2,
+                      "dishName" : "malai boti",
+                      "description": "description of malai boti"
+                    },
+                    {
+                      "id" : 3,
+                      "dishName" : "chicken roll",
+                      "description": "description of chicken roll"
+                    }
+                ],
+      "contacts":[
+                  {
+                    "id" : 1,
+                    "address" : "123 Fake Street",
+                    "city": "Mississauga",
+                    "province": "ON"
+                  },
+                  {
+                    "id" : 2,
+                    "address" : "123 Another Fake Street",
+                    "city": "Brampton",
+                    "province": "ON"
+                  }
+              ]
+            }
+}
+

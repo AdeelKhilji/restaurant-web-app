@@ -1,19 +1,18 @@
-import Items from "./data/data.json"
 
-export const getStaticProps = async () =>{
-  return{
-    props:{
-      menuItems: Items
-    }
-  }
-}
-
-export default function MenuComponent({menuItems}) {
+const MenuComponent = ({data}) =>
+{
   return (
     <div class="grid place-items-center h-screen">
-      {/* {{menuItems.map(menuItem =>(
-        <p key={menuItem.id}>{menuItem}</p>
-      ))}} */}
+      {data ? (<div>{data.map((item,index) =>(
+        <div key={index} eventKey={index}>
+          {/* <p>{item.id}</p> */}
+          <p><strong>{item.dishName}</strong></p>
+          <p>{item.description}</p><br/>
+          </div>
+      ))}</div>) : (<div>There is no data</div>)}
+      
     </div>
   )
 }
+
+export default MenuComponent;

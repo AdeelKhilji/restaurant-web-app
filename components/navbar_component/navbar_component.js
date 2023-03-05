@@ -13,10 +13,10 @@ function MobileNav({open, setOpen}) {
                 <a className="text-xl font-semibold" href="/">LOGO</a>
             </div>
             <div className="flex flex-col ml-4">
-                <a className="text-xl font-medium my-4" href="/about" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
-                    About
+                <a className="text-xl font-medium my-4" href="//menuPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                    Menu
                 </a>
-                <a className="text-xl font-normal my-4" href="/contact" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                <a className="text-xl font-normal my-4" href="/contactPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Contact
                 </a>
             </div>  
@@ -31,7 +31,7 @@ export default function Navbar() {
         <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
-                <a className="text-2xl font-semibold" href="/">LOGO</a>
+                <a className="text-2xl font-semibold" href="/menuPage">LOGO</a>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 
@@ -46,7 +46,7 @@ export default function Navbar() {
 
                 <div className="hidden md:flex">
                     <NavLink to="/menuPage">
-                        ABOUT
+                        MENU
                     </NavLink>
                     <NavLink to="/contactPage">
                         CONTACT

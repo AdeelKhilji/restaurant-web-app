@@ -1,9 +1,25 @@
 import ContactComponent from "../components/contact_component/contact_component";
-import useSWR from 'swr';
 
-export default function ContactPage() {
+export async function getStaticProps(){
+  const fs = require("fs/promises");
+  const path = require("path");
+  const filePath = path.join(process.cwd(), '/data', '/data.json');
+
+  let data = await fs.readFile(filePath);
+  data = JSON.parse(data);
+
+  return{
+    props:{
+      data: data.data
+    }
+  }
+}
+
+export default function ContactPage({data}) {
 
   return (
-          <ContactComponent/>
+    <div class="grid place-items-center h-screen">
+      <ContactComponent data={data.contacts}/>
+    </div>
   )
 }
