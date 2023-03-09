@@ -18,8 +18,10 @@ export async function getStaticProps(){
 export default function ContactPage({data}) {
 
   return (
-    <div class="grid place-items-center h-screen">
-      <ContactComponent data={data.contacts}/>
+    <div className="table w-full">
+      <div className="table-row">
+        <ContactComponent data={data.contacts}/>
+      </div>
     </div>
   )
 }

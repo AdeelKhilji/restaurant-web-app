@@ -17,10 +17,7 @@ export async function getStaticProps(){
 
 export default function MenuPage({data}) 
 {
-  // console.log(data.menu);
   return (
-    <div class="grid place-items-center h-screen">
-      <MenuComponent data={data.menu}/>
-    </div>
+        <MenuComponent data={data.menu}/>
   )
 }
