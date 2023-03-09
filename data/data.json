@@ -4,18 +4,21 @@
           "menu":[
                     {
                       "id" : 1,
-                      "dishName" : "chaat",
-                      "description": "description of chaat"
+                      "dishImg": "images/dish1.png",
+                      "dishName" : "Bun Kabab",
+                      "description": "a pulled beef mixed with mashed potatoes coated with whipped egg coating, seared off on a stove. Served on an egg bun with red onions and green mint sauce."
                     },
                     {
                       "id" : 2,
-                      "dishName" : "malai boti",
-                      "description": "description of malai boti"
+                      "dishImg": "images/dish2.png",
+                      "dishName" : "Samosa",
+                      "description": "a triangle pastery filled with mashed potatoes, mixed with spices, and deep fried. Served with green mint sauce."
                     },
                     {
                       "id" : 3,
-                      "dishName" : "chicken roll",
-                      "description": "description of chicken roll"
+                      "dishImg": "images/dish3.png",
+                      "dishName" : "Pakora",
+                      "description": "a battered chunks of mashed potatoes mixed with spices, and deep fried. Served with green mint sauce."
                     }
                 ],
       "contacts":[
