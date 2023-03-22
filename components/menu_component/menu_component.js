@@ -14,12 +14,11 @@ const MenuComponent = ({data}) =>
 {
   console.log(data);
   return (
-    <>
       <SimpleGrid spacing={5} templateColumns='repeat(auto-fill, minmax(350px, 1fr))'>
-      {data ? (<div>{data.map((item,index) =>(
+      {data ? (<>{data.map((item,index) =>(
         <div key={index} eventKey={index}>
           <br/>
-          <Card w='100%'>
+          <Card w='100%' h='500px'>
             <CardBody>
               <Image src={item.dishImg} borderRadius='lg'/>
             <Stack mt='6' spacing='3'>
@@ -32,9 +31,8 @@ const MenuComponent = ({data}) =>
           </Card>
           <br/>
         </div>
-        ))}</div>) : (<div>There is no data</div>)}
+        ))}</>) : (<div>There is no data</div>)}
       </SimpleGrid>
-    </>
   )
 }
 
