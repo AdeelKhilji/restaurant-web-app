@@ -1,24 +1,24 @@
 import { useState } from 'react'
-
+import { Link } from '@chakra-ui/react'
 function NavLink({to, children}) {
-    return <a href={to} className={`mx-4`}>
+    return <Link href={to} className={`mx-4`}>
         {children}
-    </a>
+    </Link>
 }
 
 function MobileNav({open, setOpen}) {
     return (
         <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20"> {/*logo container*/}
-                <a className="text-xl font-semibold" href="/">LOGO</a>
+                <Link className="text-xl font-semibold" href="/">LOGO</Link>
             </div>
             <div className="flex flex-col ml-4">
-                <a className="text-xl font-medium my-4" href="//menuPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                <Link className="text-xl font-medium my-4" href="//menuPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Menu
-                </a>
-                <a className="text-xl font-normal my-4" href="/contactPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                <Link className="text-xl font-normal my-4" href="/contactPage" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     Contact
-                </a>
+                </Link>
             </div>  
         </div>
     )
@@ -31,7 +31,7 @@ export default function Navbar() {
         <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
-                <a className="text-2xl font-semibold" href="/menuPage">LOGO</a>
+                <Link className="text-2xl font-semibold" href="/menuPage">LOGO</Link>
             </div>
             <div className="w-9/12 flex justify-end items-center">
 

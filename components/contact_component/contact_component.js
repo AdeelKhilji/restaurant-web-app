@@ -65,11 +65,11 @@ export default function ContactComponent({data}) {
   return (
     <>
     <div>
-      {data ? (<div>{data.map((item,index) =>(
-        <div className="table-cell">
+      {data ? (<>{data.map((item,index) =>(
+        <div key={index} eventKey={index} className="table-cell">
           <div className="p-10">
             <div className="p-5 max-w-sm rounded overflow-hidden shadow-lg w-screen">
-              <div key={index} eventKey={index}>
+              <div >
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{item.address}</div>
                     <p className="text-gray-700 text-base">
@@ -80,7 +80,7 @@ export default function ContactComponent({data}) {
               </div>
             </div>
           </div>
-      ))}</div>) : (<div>There is no data</div>)} 
+      ))}</>) : (<div>There is no data</div>)} 
         <Container maxW="450px" mt={12}>
           <Heading>CONTACT US</Heading>
           {error && (
